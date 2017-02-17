@@ -12,6 +12,8 @@
 		AF092D8D1E56F71C00D85BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF092D8C1E56F71C00D85BCA /* Assets.xcassets */; };
 		AF092D901E56F71C00D85BCA /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF092D8E1E56F71C00D85BCA /* LaunchScreen.storyboard */; };
 		AF092DAC1E56FD2B00D85BCA /* HYYMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092DA61E56FD2B00D85BCA /* HYYMainViewController.m */; };
+		AF092DAF1E56FF8B00D85BCA /* HYYOneViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092DAE1E56FF8B00D85BCA /* HYYOneViewController.m */; };
+		AF092DB21E57055200D85BCA /* HYYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092DB11E57055200D85BCA /* HYYTabBarViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,10 @@
 		AF092D911E56F71C00D85BCA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		AF092DA51E56FD2B00D85BCA /* HYYMainViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYMainViewController.h; sourceTree = "<group>"; };
 		AF092DA61E56FD2B00D85BCA /* HYYMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYMainViewController.m; sourceTree = "<group>"; };
+		AF092DAD1E56FF8B00D85BCA /* HYYOneViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYOneViewController.h; sourceTree = "<group>"; };
+		AF092DAE1E56FF8B00D85BCA /* HYYOneViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYOneViewController.m; sourceTree = "<group>"; };
+		AF092DB01E57055200D85BCA /* HYYTabBarViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYTabBarViewController.h; sourceTree = "<group>"; };
+		AF092DB11E57055200D85BCA /* HYYTabBarViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYTabBarViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,6 +95,8 @@
 			children = (
 				AF092DA51E56FD2B00D85BCA /* HYYMainViewController.h */,
 				AF092DA61E56FD2B00D85BCA /* HYYMainViewController.m */,
+				AF092DB01E57055200D85BCA /* HYYTabBarViewController.h */,
+				AF092DB11E57055200D85BCA /* HYYTabBarViewController.m */,
 			);
 			path = Main;
 			sourceTree = "<group>";
@@ -107,6 +115,8 @@
 		AF092DA81E56FD2B00D85BCA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				AF092DAD1E56FF8B00D85BCA /* HYYOneViewController.h */,
+				AF092DAE1E56FF8B00D85BCA /* HYYOneViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -202,6 +212,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF092DB21E57055200D85BCA /* HYYTabBarViewController.m in Sources */,
+				AF092DAF1E56FF8B00D85BCA /* HYYOneViewController.m in Sources */,
 				AF092D851E56F71C00D85BCA /* AppDelegate.m in Sources */,
 				AF092D821E56F71C00D85BCA /* main.m in Sources */,
 				AF092DAC1E56FD2B00D85BCA /* HYYMainViewController.m in Sources */,

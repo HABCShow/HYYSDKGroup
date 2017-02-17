@@ -1,27 +1,32 @@
 //
-//  HYYMainViewController.m
+//  HYYTabBarViewController.m
 //  HYYSDKGroup
 //
 //  Created by xuchunlei on 2017/2/17.
 //  Copyright © 2017年 abc_show. All rights reserved.
 //
 
-#import "HYYMainViewController.h"
 #import "HYYTabBarViewController.h"
-@interface HYYMainViewController ()
+#import "HYYOneViewController.h"
+
+@interface HYYTabBarViewController ()
 
 @end
 
-@implementation HYYMainViewController
+@implementation HYYTabBarViewController
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
-    HYYTabBarViewController *tabVC = [[HYYTabBarViewController alloc]init];
-    [self addChildViewController:tabVC];
-    tabVC.view.frame = self.view.frame;
-    [self.view addSubview:tabVC.view];
-    [tabVC didMoveToParentViewController:self];
+    [self setupUI];
+}
+-(void)setupUI{
+    
+    HYYOneViewController *oneVC = [[HYYOneViewController alloc]init];
+    oneVC.title = @"实用技术";
+    UINavigationController *nav1 = [[UINavigationController alloc]initWithRootViewController:oneVC];
+    nav1.tabBarItem.title = @"实用技术";
+    self.viewControllers = @[nav1];
+    
 }
 
 - (void)didReceiveMemoryWarning {
