@@ -8,6 +8,34 @@
 
 #import "HYYOneCollectionViewCell.h"
 
+@interface HYYOneCollectionViewCell ()
+
+@property(nonatomic, weak)UILabel *titleLabel;
+
+@end
+
 @implementation HYYOneCollectionViewCell
+
+-(instancetype)initWithFrame:(CGRect)frame{
+    
+    if (self = [super initWithFrame:frame]) {
+        
+        [self setupUI];
+        
+    }
+    return self;
+    
+}
+
+-(void)setupUI{
+    
+    UILabel *label = [[UILabel alloc]init];
+    self.titleLabel = label;
+    [self.contentView addSubview:label];
+    label.backgroundColor = [UIColor blackColor];
+    
+    
+    
+}
 
 @end

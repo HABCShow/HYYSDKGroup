@@ -7,7 +7,10 @@
 //
 
 #import <UIKit/UIKit.h>
+@class oneModel;
 
 @interface HYYOneCollectionViewCell : UICollectionViewCell
+
+@property(nonatomic, strong) oneModel *model;
 
 @end

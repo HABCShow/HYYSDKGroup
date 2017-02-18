@@ -19,7 +19,7 @@ static NSString *CellID = @"collectionViewCell";
 @implementation HYYOneViewController
 {
     UICollectionView *_collection;
-    NSArray *_nameList;
+    NSArray<oneModel *> *_nameList;
 }
 
 - (void)viewDidLoad {
@@ -59,9 +59,12 @@ static NSString *CellID = @"collectionViewCell";
     return cell;
 }
 
-- (void)didReceiveMemoryWarning {
-    [super didReceiveMemoryWarning];
-    // Dispose of any resources that can be recreated.
+-(void)collectionView:(UICollectionView *)collectionView didSelectItemAtIndexPath:(NSIndexPath *)indexPath{
+    NSString *vcName = _nameList[indexPath.item].nameVC;
+    Class cls = NSClassFromString(vcName);
+    UIViewController *vc = [cls new];
+    vc.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:vc animated:NO];
 }
 
 /*

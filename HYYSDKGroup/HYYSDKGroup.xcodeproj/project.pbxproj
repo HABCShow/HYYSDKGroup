@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		AEDBF85788AD19147485A4E5 /* libPods-HYYSDKGroup.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 51B3EDEE873DB9D8FB45271A /* libPods-HYYSDKGroup.a */; };
 		AF092D821E56F71C00D85BCA /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092D811E56F71C00D85BCA /* main.m */; };
 		AF092D851E56F71C00D85BCA /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092D841E56F71C00D85BCA /* AppDelegate.m */; };
 		AF092D8D1E56F71C00D85BCA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AF092D8C1E56F71C00D85BCA /* Assets.xcassets */; };
@@ -20,6 +21,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		167814BCED443CB3A1AA1566 /* Pods-HYYSDKGroup.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYYSDKGroup.release.xcconfig"; path = "Pods/Target Support Files/Pods-HYYSDKGroup/Pods-HYYSDKGroup.release.xcconfig"; sourceTree = "<group>"; };
+		51B3EDEE873DB9D8FB45271A /* libPods-HYYSDKGroup.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-HYYSDKGroup.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		5F4E9E2686846A0D7F5C9243 /* Pods-HYYSDKGroup.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HYYSDKGroup.debug.xcconfig"; path = "Pods/Target Support Files/Pods-HYYSDKGroup/Pods-HYYSDKGroup.debug.xcconfig"; sourceTree = "<group>"; };
 		AF092D7D1E56F71C00D85BCA /* HYYSDKGroup.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HYYSDKGroup.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AF092D811E56F71C00D85BCA /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF092D831E56F71C00D85BCA /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -46,17 +50,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AEDBF85788AD19147485A4E5 /* libPods-HYYSDKGroup.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		608EF77A46FC399974DAE1E2 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				5F4E9E2686846A0D7F5C9243 /* Pods-HYYSDKGroup.debug.xcconfig */,
+				167814BCED443CB3A1AA1566 /* Pods-HYYSDKGroup.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		AF092D741E56F71C00D85BCA = {
 			isa = PBXGroup;
 			children = (
 				AF092D7F1E56F71C00D85BCA /* HYYSDKGroup */,
 				AF092D7E1E56F71C00D85BCA /* Products */,
+				608EF77A46FC399974DAE1E2 /* Pods */,
+				BB0784CEB9D387349C637DD1 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -165,6 +181,14 @@
 			path = "finger(指纹)";
 			sourceTree = "<group>";
 		};
+		BB0784CEB9D387349C637DD1 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				51B3EDEE873DB9D8FB45271A /* libPods-HYYSDKGroup.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -172,9 +196,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = AF092D941E56F71C00D85BCA /* Build configuration list for PBXNativeTarget "HYYSDKGroup" */;
 			buildPhases = (
+				CA30F833F18E0BEB017004C7 /* [CP] Check Pods Manifest.lock */,
 				AF092D791E56F71C00D85BCA /* Sources */,
 				AF092D7A1E56F71C00D85BCA /* Frameworks */,
 				AF092D7B1E56F71C00D85BCA /* Resources */,
+				CF1362C95A72A45E2E8C30B9 /* [CP] Embed Pods Frameworks */,
+				9D86331480F13DC26A2BDED3 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -230,6 +257,54 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		9D86331480F13DC26A2BDED3 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYYSDKGroup/Pods-HYYSDKGroup-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CA30F833F18E0BEB017004C7 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		CF1362C95A72A45E2E8C30B9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-HYYSDKGroup/Pods-HYYSDKGroup-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		AF092D791E56F71C00D85BCA /* Sources */ = {
@@ -351,10 +426,12 @@
 		};
 		AF092D951E56F71C00D85BCA /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 5F4E9E2686846A0D7F5C9243 /* Pods-HYYSDKGroup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W5FRMW6GD;
 				INFOPLIST_FILE = HYYSDKGroup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abc-show.HYYSDKGroup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -363,10 +440,12 @@
 		};
 		AF092D961E56F71C00D85BCA /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 167814BCED443CB3A1AA1566 /* Pods-HYYSDKGroup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 5W5FRMW6GD;
 				INFOPLIST_FILE = HYYSDKGroup/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "com.abc-show.HYYSDKGroup";
 				PRODUCT_NAME = "$(TARGET_NAME)";
