@@ -7,6 +7,8 @@
 //
 
 #import "HYYOneCollectionViewCell.h"
+#import <Masonry.h>
+#import "oneModel.h"
 
 @interface HYYOneCollectionViewCell ()
 
@@ -19,7 +21,6 @@
 -(instancetype)initWithFrame:(CGRect)frame{
     
     if (self = [super initWithFrame:frame]) {
-        
         [self setupUI];
         
     }
@@ -28,14 +29,23 @@
 }
 
 -(void)setupUI{
-    
+    self.backgroundColor = [UIColor redColor];
     UILabel *label = [[UILabel alloc]init];
     self.titleLabel = label;
     [self.contentView addSubview:label];
-    label.backgroundColor = [UIColor blackColor];
-    
+    label.backgroundColor = [UIColor orangeColor];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.edges.equalTo(self.contentView);
+    }];
+
+}
+
+-(void)setModel:(oneModel *)model{
+    self.titleLabel.text = model.title;
+    self.titleLabel.numberOfLines = 0;
+    self.titleLabel.textAlignment = NSTextAlignmentCenter;
     
     
 }
-
+    
 @end

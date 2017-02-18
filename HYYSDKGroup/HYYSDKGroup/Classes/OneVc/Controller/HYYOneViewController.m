@@ -8,6 +8,7 @@
 
 #import "HYYOneViewController.h"
 #import "oneModel.h"
+#import "HYYOneCollectionViewCell.h"
 
 
 static NSString *CellID = @"collectionViewCell";
@@ -33,7 +34,7 @@ static NSString *CellID = @"collectionViewCell";
     _collection = [[UICollectionView alloc]initWithFrame:self.view.bounds collectionViewLayout:flowLayout];
     _collection.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
     [self.view addSubview:_collection];
-    [_collection registerClass:[UICollectionViewCell class] forCellWithReuseIdentifier:CellID];
+    [_collection registerClass:[HYYOneCollectionViewCell class] forCellWithReuseIdentifier:CellID];
     _collection.delegate = self;
     _collection.dataSource = self;
 }
@@ -54,8 +55,8 @@ static NSString *CellID = @"collectionViewCell";
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
-    UICollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellID forIndexPath:indexPath];
-    cell.backgroundColor = [UIColor redColor];
+    HYYOneCollectionViewCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:CellID forIndexPath:indexPath];
+    cell.model = _nameList[indexPath.item];
     return cell;
 }
 
