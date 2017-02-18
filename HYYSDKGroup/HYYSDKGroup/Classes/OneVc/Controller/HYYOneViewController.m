@@ -7,6 +7,7 @@
 //
 
 #import "HYYOneViewController.h"
+#import "oneModel.h"
 
 
 static NSString *CellID = @"collectionViewCell";
@@ -18,11 +19,12 @@ static NSString *CellID = @"collectionViewCell";
 @implementation HYYOneViewController
 {
     UICollectionView *_collection;
+    NSArray *_nameList;
 }
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-
+    [self loadData];
     UICollectionViewFlowLayout *flowLayout = [[UICollectionViewFlowLayout alloc]init];
     flowLayout.itemSize = CGSizeMake(([UIScreen mainScreen].bounds.size.width - 60) / 2 , 50);
     flowLayout.minimumLineSpacing = 20;
@@ -35,12 +37,20 @@ static NSString *CellID = @"collectionViewCell";
     _collection.delegate = self;
     _collection.dataSource = self;
 }
+-(void)loadData{
+    
+    NSDictionary *dict = @{@"title":@"指纹解锁",@"nameVC":@"HYYFingerViewController"};
+    oneModel *model = [oneModel oneModelWithDiction:dict];
+    NSMutableArray *arr = [NSMutableArray array];
+    [arr addObject:model];
+    _nameList = arr.copy;
+}
 
 -(NSInteger)numberOfSectionsInCollectionView:(UICollectionView *)collectionView{
     return 1;
 }
 -(NSInteger)collectionView:(UICollectionView *)collectionView numberOfItemsInSection:(NSInteger)section{
-    return 10;
+    return _nameList.count;
 }
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
     
