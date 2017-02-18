@@ -44,9 +44,9 @@
         LAContext *context = [[LAContext alloc]init];
         context.localizedFallbackTitle = @"密码输入";
         // 检查是否支持指纹识别   硬件要求5s以上
-        if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:nil]) {
+        if ([context canEvaluatePolicy:LAPolicyDeviceOwnerAuthentication error:nil]) {
             // 可以使用指纹识别
-            [context evaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics localizedReason:@"请进行指纹解锁🔓" reply:^(BOOL success, NSError * _Nullable error) {
+            [context evaluatePolicy:LAPolicyDeviceOwnerAuthentication localizedReason:@"请进行指纹解锁🔓" reply:^(BOOL success, NSError * _Nullable error) {
                 if (success) {
                     // 主线程回调
                     [[NSOperationQueue mainQueue]addOperationWithBlock:^{
