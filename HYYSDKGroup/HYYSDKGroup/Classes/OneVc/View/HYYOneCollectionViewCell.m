@@ -7,7 +7,6 @@
 //
 
 #import "HYYOneCollectionViewCell.h"
-#import <Masonry.h>
 #import "oneModel.h"
 
 @interface HYYOneCollectionViewCell ()

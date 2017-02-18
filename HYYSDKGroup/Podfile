@@ -5,6 +5,7 @@ target 'HYYSDKGroup' do
 
   # use_frameworks!
 pod 'Masonry'
+pod 'SVProgressHUD'
 
 
 end
