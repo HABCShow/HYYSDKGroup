@@ -11,6 +11,7 @@
 #import "HYYOneCollectionViewCell.h"
 
 
+
 static NSString *CellID = @"collectionViewCell";
 
 @interface HYYOneViewController ()<UICollectionViewDelegate,UICollectionViewDataSource>
@@ -41,9 +42,13 @@ static NSString *CellID = @"collectionViewCell";
 -(void)loadData{
     
     NSDictionary *dict = @{@"title":@"指纹解锁",@"nameVC":@"HYYFingerViewController"};
-    oneModel *model = [oneModel oneModelWithDiction:dict];
+    NSDictionary *dict1 = @{@"title":@"距离传感",@"nameVC":@"HYYProximityViewController"};
+    NSArray *dictArr = @[dict,dict1];
     NSMutableArray *arr = [NSMutableArray array];
-    [arr addObject:model];
+    [dictArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+       oneModel *model = [oneModel oneModelWithDiction:obj];
+        [arr addObject:model];
+    }];
     _nameList = arr.copy;
 }
 
