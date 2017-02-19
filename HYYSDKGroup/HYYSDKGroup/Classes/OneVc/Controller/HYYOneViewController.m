@@ -43,7 +43,8 @@ static NSString *CellID = @"collectionViewCell";
     
     NSDictionary *dict = @{@"title":@"指纹解锁",@"nameVC":@"HYYFingerViewController"};
     NSDictionary *dict1 = @{@"title":@"距离传感",@"nameVC":@"HYYProximityViewController"};
-    NSArray *dictArr = @[dict,dict1];
+    NSDictionary *dict2 = @{@"title":@"摇一摇",@"nameVC":@"HYYMotionViewController"};
+    NSArray *dictArr = @[dict,dict1,dict2];
     NSMutableArray *arr = [NSMutableArray array];
     [dictArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
        oneModel *model = [oneModel oneModelWithDiction:obj];
