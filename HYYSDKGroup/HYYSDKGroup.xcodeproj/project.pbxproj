@@ -17,6 +17,7 @@
 		AF092DB21E57055200D85BCA /* HYYTabBarViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF092DB11E57055200D85BCA /* HYYTabBarViewController.m */; };
 		AF293D661E59833E00F2315B /* HYYProximityViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D651E59833E00F2315B /* HYYProximityViewController.m */; };
 		AF293D6A1E598C0C00F2315B /* HYYMotionViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D691E598C0C00F2315B /* HYYMotionViewController.m */; };
+		AF293D6E1E5AAE0100F2315B /* HYYLONoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D6D1E5AAE0100F2315B /* HYYLONoteViewController.m */; };
 		AFB78B691E5804B200764F9C /* HYYOneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */; };
 		AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6B1E58051F00764F9C /* oneModel.m */; };
 		AFB78B701E5808EE00764F9C /* HYYFingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6F1E5808EE00764F9C /* HYYFingerViewController.m */; };
@@ -44,6 +45,8 @@
 		AF293D651E59833E00F2315B /* HYYProximityViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYProximityViewController.m; sourceTree = "<group>"; };
 		AF293D681E598C0C00F2315B /* HYYMotionViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYMotionViewController.h; sourceTree = "<group>"; };
 		AF293D691E598C0C00F2315B /* HYYMotionViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYMotionViewController.m; sourceTree = "<group>"; };
+		AF293D6C1E5AAE0100F2315B /* HYYLONoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYLONoteViewController.h; sourceTree = "<group>"; };
+		AF293D6D1E5AAE0100F2315B /* HYYLONoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYLONoteViewController.m; sourceTree = "<group>"; };
 		AFB78B671E5804B200764F9C /* HYYOneCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYOneCollectionViewCell.h; sourceTree = "<group>"; };
 		AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYOneCollectionViewCell.m; sourceTree = "<group>"; };
 		AFB78B6A1E58051F00764F9C /* oneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneModel.h; sourceTree = "<group>"; };
@@ -137,6 +140,7 @@
 		AF092DA71E56FD2B00D85BCA /* OneVc */ = {
 			isa = PBXGroup;
 			children = (
+				AF293D6B1E5AADE900F2315B /* LONote(本地推送) */,
 				AF293D671E598BFB00F2315B /* motion(摇一摇) */,
 				AF293D631E59831F00F2315B /* proximity(距离传感) */,
 				AFB78B6D1E5808C500764F9C /* finger(指纹) */,
@@ -198,6 +202,16 @@
 				AF293D691E598C0C00F2315B /* HYYMotionViewController.m */,
 			);
 			path = "motion(摇一摇)";
+			sourceTree = "<group>";
+		};
+		AF293D6B1E5AADE900F2315B /* LONote(本地推送) */ = {
+			isa = PBXGroup;
+			children = (
+				AF293D6C1E5AAE0100F2315B /* HYYLONoteViewController.h */,
+				AF293D6D1E5AAE0100F2315B /* HYYLONoteViewController.m */,
+			);
+			name = "LONote(本地推送)";
+			path = LONote;
 			sourceTree = "<group>";
 		};
 		AFB78B6D1E5808C500764F9C /* finger(指纹) */ = {
@@ -346,6 +360,7 @@
 				AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */,
 				AF092D851E56F71C00D85BCA /* AppDelegate.m in Sources */,
 				AF293D661E59833E00F2315B /* HYYProximityViewController.m in Sources */,
+				AF293D6E1E5AAE0100F2315B /* HYYLONoteViewController.m in Sources */,
 				AF092D821E56F71C00D85BCA /* main.m in Sources */,
 				AFB78B691E5804B200764F9C /* HYYOneCollectionViewCell.m in Sources */,
 				AF092DAC1E56FD2B00D85BCA /* HYYMainViewController.m in Sources */,

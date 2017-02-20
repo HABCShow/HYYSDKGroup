@@ -24,9 +24,32 @@
     [self.window setRootViewController:mainVC];
     [self.window makeKeyAndVisible];
     
+    // 本地通知，应用在关闭状态
+  UILocalNotification *localNote = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
+    NSString *context = localNote.userInfo[@"context"];
+    NSLog(@"%@11",context);
     return YES;
 }
-
+// 接收本地通知，进行下一步操作（应用在后台）
+-(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
+   NSString *context = notification.userInfo[@"context"];
+    NSLog(@"%@",context);
+    
+}
+    
+- (void)application:(UIApplication *)application handleActionWithIdentifier:(nullable NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler{
+    
+    if ([identifier isEqualToString:@"foreground"]) {
+        NSLog(@"点击前台按钮");
+        
+    } else {
+        
+        NSLog(@"点击后台按钮");
+        
+    }
+    //手动调用完成回调
+    completionHandler();
+}
 
 - (void)applicationWillResignActive:(UIApplication *)application {
     // Sent when the application is about to move from active to inactive state. This can occur for certain types of temporary interruptions (such as an incoming phone call or SMS message) or when the user quits the application and it begins the transition to the background state.
