@@ -18,7 +18,7 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor orangeColor];
     [self setupUI];
 }
 
@@ -27,7 +27,8 @@
     UIButton *btn = [[UIButton alloc]init];
     [self.view addSubview:btn];
     [btn setTitle:@"点击按钮->指纹验证变换颜色" forState:UIControlStateNormal];
-    btn.backgroundColor = [UIColor colorWithWhite:0.8 alpha:1];
+    [btn setTitleColor:[UIColor blackColor] forState:UIControlStateNormal];
+    btn.backgroundColor = [UIColor whiteColor];
     btn.layer.cornerRadius = 10;
     btn.layer.masksToBounds = YES;
     [btn mas_makeConstraints:^(MASConstraintMaker *make) {

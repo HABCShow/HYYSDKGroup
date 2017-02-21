@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<array>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYFingerViewController</string>
+		<key>title</key>
+		<string>指纹解锁</string>
+	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYProximityViewController</string>
+		<key>title</key>
+		<string>距离传感</string>
+	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYMotionViewController</string>
+		<key>title</key>
+		<string>摇一摇</string>
+	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYLONoteViewController</string>
+		<key>title</key>
+		<string>本地通知</string>
+	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYSMSViewController</string>
+		<key>title</key>
+		<string>短信验证</string>
+	</dict>
+</array>
+</plist>

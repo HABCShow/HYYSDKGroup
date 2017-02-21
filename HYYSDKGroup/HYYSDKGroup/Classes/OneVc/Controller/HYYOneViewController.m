@@ -40,14 +40,17 @@ static NSString *CellID = @"collectionViewCell";
     _collection.dataSource = self;
 }
 -(void)loadData{
+//    
+//    NSDictionary *dict = @{@"title":@"指纹解锁",@"nameVC":@"HYYFingerViewController"};
+//    NSDictionary *dict1 = @{@"title":@"距离传感",@"nameVC":@"HYYProximityViewController"};
+//    NSDictionary *dict2 = @{@"title":@"摇一摇",@"nameVC":@"HYYMotionViewController"};
+//    NSDictionary *dict3 = @{@"title":@"本地通知",@"nameVC":@"HYYLONoteViewController"};
+//    NSArray *dictArr = @[dict,dict1,dict2,dict3];
+   NSURL *url = [[NSBundle mainBundle]URLForResource:@"cellList.plist" withExtension:nil];
+    NSArray *array = [NSArray arrayWithContentsOfURL:url];
     
-    NSDictionary *dict = @{@"title":@"指纹解锁",@"nameVC":@"HYYFingerViewController"};
-    NSDictionary *dict1 = @{@"title":@"距离传感",@"nameVC":@"HYYProximityViewController"};
-    NSDictionary *dict2 = @{@"title":@"摇一摇",@"nameVC":@"HYYMotionViewController"};
-    NSDictionary *dict3 = @{@"title":@"本地通知",@"nameVC":@"HYYLONoteViewController"};
-    NSArray *dictArr = @[dict,dict1,dict2,dict3];
     NSMutableArray *arr = [NSMutableArray array];
-    [dictArr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+    [array enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
        oneModel *model = [oneModel oneModelWithDiction:obj];
         [arr addObject:model];
     }];

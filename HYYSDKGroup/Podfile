@@ -6,6 +6,9 @@ target 'HYYSDKGroup' do
   # use_frameworks!
 pod 'Masonry'
 pod 'SVProgressHUD'
+# 短信验证
+pod 'MOBFoundation_IDFA'
 
+pod 'SMSSDK'
 
 end
