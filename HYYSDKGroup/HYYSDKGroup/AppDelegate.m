@@ -8,6 +8,8 @@
 
 #import "AppDelegate.h"
 #import "HYYMainViewController.h"
+#import <UMSocialCore/UMSocialCore.h>
+
 
 @interface AppDelegate ()
 
@@ -28,6 +30,9 @@
   UILocalNotification *localNote = launchOptions[UIApplicationLaunchOptionsLocalNotificationKey];
     NSString *context = localNote.userInfo[@"context"];
     NSLog(@"%@11",context);
+    
+    // 友盟分享
+    [self umengShare];
     return YES;
 }
 // 接收本地通知，进行下一步操作（应用在后台）
@@ -36,6 +41,55 @@
     NSLog(@"%@",context);
     
 }
+// 友盟分享代码
+-(void)umengShare{
+    /* 打开调试日志 */
+    [[UMSocialManager defaultManager] openLog:YES];
+    
+    /* 设置友盟appkey */
+    [[UMSocialManager defaultManager] setUmSocialAppkey:@"58ac68d982b635619d001933"];
+    
+    [self configUSharePlatforms];
+    
+    [self confitUShareSettings];
+    
+    
+    
+}
+-(void)configUSharePlatforms{
+    
+    /* 设置新浪的appKey和appSecret */
+    [[UMSocialManager defaultManager] setPlaform:UMSocialPlatformType_Sina appKey:@"3543611613"  appSecret:@"df46d3c44655ca6b477fe90b3de3280b" redirectURL:@"https://sns.whalecloud.com/sina2/callback"];
+    
+}
+-(void)confitUShareSettings{
+    /*
+     * 打开图片水印
+     */
+    [UMSocialGlobal shareInstance].isUsingWaterMark = YES;
+    
+    /*
+     * 关闭强制验证https，可允许http图片分享，但需要在info.plist设置安全域名
+     <key>NSAppTransportSecurity</key>
+     <dict>
+     <key>NSAllowsArbitraryLoads</key>
+     <true/>
+     </dict>
+     */
+    [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
+    
+    
+}
+    // 友盟回调
+    // 支持所有iOS系统--新浪微博仅支持此方法
+- (BOOL)application:(UIApplication *)application openURL:(NSURL *)url sourceApplication:(NSString *)sourceApplication annotation:(id)annotation
+    {
+        BOOL result = [[UMSocialManager defaultManager] handleOpenURL:url];
+        if (!result) {
+            // 其他如支付等SDK的回调
+        }
+        return result;
+    }
     
 - (void)application:(UIApplication *)application handleActionWithIdentifier:(nullable NSString *)identifier forLocalNotification:(UILocalNotification *)notification completionHandler:(void(^)())completionHandler{
     
