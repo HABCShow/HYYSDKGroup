@@ -4,19 +4,26 @@ PODS:
   - SMSSDK (2.1.4):
     - MOBFoundation_IDFA
   - SVProgressHUD (2.1.2)
+  - UMengUShare/Core (6.2.2):
+    - UMengUShare/Network
+  - UMengUShare/Network (6.2.2)
+  - UMengUShare/Social/Sina (6.2.2):
+    - UMengUShare/Core
 
 DEPENDENCIES:
   - Masonry
   - MOBFoundation_IDFA
   - SMSSDK
   - SVProgressHUD
+  - UMengUShare/Social/Sina
 
 SPEC CHECKSUMS:
   Masonry: 7c429b56da9d4ee0bbb3ed77a5ea710d6a5df39e
   MOBFoundation_IDFA: 13a97a3a8dff584e745f71ca58d7c172797981e3
   SMSSDK: 4b5c95fc74522969187123df61b2c9567f48435e
   SVProgressHUD: c404a55d78acbeb7ebb78b76d3faf986475a6994
+  UMengUShare: fc0a98b8d5297632e82874318fd72a10d17da228
 
-PODFILE CHECKSUM: d9087a414214b853c2ffe5e985598b6e95d3cc54
+PODFILE CHECKSUM: 62c378e153583739d3cc4917a7c35347cf887aa7
 
 COCOAPODS: 1.2.0

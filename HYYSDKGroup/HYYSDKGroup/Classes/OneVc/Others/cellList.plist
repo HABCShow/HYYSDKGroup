@@ -32,5 +32,11 @@
 		<key>title</key>
 		<string>短信验证</string>
 	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYShareViewController</string>
+		<key>title</key>
+		<string>友盟分享</string>
+	</dict>
 </array>
 </plist>

@@ -79,10 +79,12 @@ EOM
 if [[ "$CONFIGURATION" == "Debug" ]]; then
   install_resource "SMSSDK/SMSSDKUI.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "UMengUShare/UShareSDK/SocialLibraries/Sina/WeiboSDK.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
   install_resource "SMSSDK/SMSSDKUI.bundle"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
+  install_resource "UMengUShare/UShareSDK/SocialLibraries/Sina/WeiboSDK.bundle"
 fi
 
 mkdir -p "${TARGET_BUILD_DIR}/${UNLOCALIZED_RESOURCES_FOLDER_PATH}"

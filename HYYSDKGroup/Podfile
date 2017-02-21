@@ -11,4 +11,7 @@ pod 'MOBFoundation_IDFA'
 
 pod 'SMSSDK'
 
+# 友盟分享
+pod 'UMengUShare/Social/Sina'
+
 end

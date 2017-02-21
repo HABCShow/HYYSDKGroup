@@ -25,6 +25,7 @@
 		AF293D7C1E5B10A800F2315B /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF293D7B1E5B10A800F2315B /* MessageUI.framework */; };
 		AF293D7E1E5B10B300F2315B /* JavaScriptCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AF293D7D1E5B10B300F2315B /* JavaScriptCore.framework */; };
 		AF293D801E5B10BD00F2315B /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AF293D7F1E5B10BD00F2315B /* libstdc++.tbd */; };
+		AF293D851E5C78D900F2315B /* HYYShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D841E5C78D900F2315B /* HYYShareViewController.m */; };
 		AFB78B691E5804B200764F9C /* HYYOneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */; };
 		AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6B1E58051F00764F9C /* oneModel.m */; };
 		AFB78B701E5808EE00764F9C /* HYYFingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6F1E5808EE00764F9C /* HYYFingerViewController.m */; };
@@ -62,6 +63,8 @@
 		AF293D7B1E5B10A800F2315B /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		AF293D7D1E5B10B300F2315B /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		AF293D7F1E5B10BD00F2315B /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
+		AF293D831E5C78D900F2315B /* HYYShareViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYShareViewController.h; sourceTree = "<group>"; };
+		AF293D841E5C78D900F2315B /* HYYShareViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYShareViewController.m; sourceTree = "<group>"; };
 		AFB78B671E5804B200764F9C /* HYYOneCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYOneCollectionViewCell.h; sourceTree = "<group>"; };
 		AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYOneCollectionViewCell.m; sourceTree = "<group>"; };
 		AFB78B6A1E58051F00764F9C /* oneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneModel.h; sourceTree = "<group>"; };
@@ -160,6 +163,7 @@
 		AF092DA71E56FD2B00D85BCA /* OneVc */ = {
 			isa = PBXGroup;
 			children = (
+				AF293D821E5C78B700F2315B /* share(友盟分享) */,
 				AF293D6F1E5B048500F2315B /* sms(短信验证) */,
 				AF293D6B1E5AADE900F2315B /* LONote(本地推送) */,
 				AF293D671E598BFB00F2315B /* motion(摇一摇) */,
@@ -243,6 +247,15 @@
 				AF293D711E5B04A000F2315B /* HYYSMSViewController.m */,
 			);
 			path = "sms(短信验证)";
+			sourceTree = "<group>";
+		};
+		AF293D821E5C78B700F2315B /* share(友盟分享) */ = {
+			isa = PBXGroup;
+			children = (
+				AF293D831E5C78D900F2315B /* HYYShareViewController.h */,
+				AF293D841E5C78D900F2315B /* HYYShareViewController.m */,
+			);
+			path = "share(友盟分享)";
 			sourceTree = "<group>";
 		};
 		AFB78B6D1E5808C500764F9C /* finger(指纹) */ = {
@@ -396,6 +409,7 @@
 				AF092DB21E57055200D85BCA /* HYYTabBarViewController.m in Sources */,
 				AF092DAF1E56FF8B00D85BCA /* HYYOneViewController.m in Sources */,
 				AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */,
+				AF293D851E5C78D900F2315B /* HYYShareViewController.m in Sources */,
 				AF092D851E56F71C00D85BCA /* AppDelegate.m in Sources */,
 				AF293D661E59833E00F2315B /* HYYProximityViewController.m in Sources */,
 				AF293D6E1E5AAE0100F2315B /* HYYLONoteViewController.m in Sources */,
@@ -518,7 +532,7 @@
 				INFOPLIST_FILE = HYYSDKGroup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abc-show.HYYSDKGroup";
+				PRODUCT_BUNDLE_IDENTIFIER = "ABC-show123";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -534,7 +548,7 @@
 				INFOPLIST_FILE = HYYSDKGroup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "com.abc-show.HYYSDKGroup";
+				PRODUCT_BUNDLE_IDENTIFIER = "ABC-show123";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
