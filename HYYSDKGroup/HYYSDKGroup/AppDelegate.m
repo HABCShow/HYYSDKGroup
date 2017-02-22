@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "HYYMainViewController.h"
+// 友盟
 #import <UMSocialCore/UMSocialCore.h>
+// 高德
+#import <AMapFoundationKit/AMapFoundationKit.h>
+
 
 
 @interface AppDelegate ()
@@ -33,6 +37,8 @@
     
     // 友盟分享
     [self umengShare];
+    // 高德地图
+    [AMapServices sharedServices].apiKey = @"e0214ac274094ae426eedf6b3074fe27";
     return YES;
 }
 // 接收本地通知，进行下一步操作（应用在后台）
@@ -77,6 +83,7 @@
      </dict>
      */
     [UMSocialGlobal shareInstance].isUsingHttpsWhenShareContent = NO;
+    
     
     
 }

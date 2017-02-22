@@ -38,5 +38,11 @@
 		<key>title</key>
 		<string>友盟分享</string>
 	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYMapMainViewController</string>
+		<key>title</key>
+		<string>运动地图</string>
+	</dict>
 </array>
 </plist>
