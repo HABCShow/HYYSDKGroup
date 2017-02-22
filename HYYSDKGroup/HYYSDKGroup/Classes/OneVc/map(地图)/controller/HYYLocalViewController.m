@@ -49,7 +49,8 @@
     [btn addTarget:self action:@selector(btnClick) forControlEvents:UIControlEventTouchUpInside];
 }
 -(void)btnClick{
-    
+    self.navigationController.navigationBarHidden = NO;
+
     [self.navigationController popViewControllerAnimated:NO];
     
 }
