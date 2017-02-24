@@ -31,6 +31,19 @@
 		AFB78B691E5804B200764F9C /* HYYOneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */; };
 		AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6B1E58051F00764F9C /* oneModel.m */; };
 		AFB78B701E5808EE00764F9C /* HYYFingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6F1E5808EE00764F9C /* HYYFingerViewController.m */; };
+		AFFF5BBE1E60610F00A9DA00 /* HYYJPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFF5BBD1E60610F00A9DA00 /* HYYJPushViewController.m */; };
+		AFFF5BC31E6061FB00A9DA00 /* jcore-ios-1.1.1.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BC01E6061FB00A9DA00 /* jcore-ios-1.1.1.a */; };
+		AFFF5BC41E6061FB00A9DA00 /* jpush-ios-3.0.2.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BC11E6061FB00A9DA00 /* jpush-ios-3.0.2.a */; };
+		AFFF5BC61E60648F00A9DA00 /* CFNetwork.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BC51E60648F00A9DA00 /* CFNetwork.framework */; };
+		AFFF5BC81E60649D00A9DA00 /* CoreFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BC71E60649D00A9DA00 /* CoreFoundation.framework */; };
+		AFFF5BCA1E6064A500A9DA00 /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BC91E6064A500A9DA00 /* CoreTelephony.framework */; };
+		AFFF5BCC1E6064AD00A9DA00 /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BCB1E6064AD00A9DA00 /* SystemConfiguration.framework */; };
+		AFFF5BCE1E6064B400A9DA00 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BCD1E6064B400A9DA00 /* CoreGraphics.framework */; };
+		AFFF5BD01E6064BF00A9DA00 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BCF1E6064BF00A9DA00 /* Foundation.framework */; };
+		AFFF5BD21E6064C800A9DA00 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BD11E6064C800A9DA00 /* UIKit.framework */; };
+		AFFF5BD41E6064D000A9DA00 /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BD31E6064D000A9DA00 /* Security.framework */; };
+		AFFF5BD61E6064EC00A9DA00 /* UserNotifications.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BD51E6064EC00A9DA00 /* UserNotifications.framework */; };
+		AFFF5BD81E6064F500A9DA00 /* libresolv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5BD71E6064F500A9DA00 /* libresolv.tbd */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -77,6 +90,22 @@
 		AFB78B6B1E58051F00764F9C /* oneModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = oneModel.m; sourceTree = "<group>"; };
 		AFB78B6E1E5808EE00764F9C /* HYYFingerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYFingerViewController.h; sourceTree = "<group>"; };
 		AFB78B6F1E5808EE00764F9C /* HYYFingerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYFingerViewController.m; sourceTree = "<group>"; };
+		AFFF5BBC1E60610F00A9DA00 /* HYYJPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYJPushViewController.h; sourceTree = "<group>"; };
+		AFFF5BBD1E60610F00A9DA00 /* HYYJPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYJPushViewController.m; sourceTree = "<group>"; };
+		AFFF5BC01E6061FB00A9DA00 /* jcore-ios-1.1.1.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jcore-ios-1.1.1.a"; sourceTree = "<group>"; };
+		AFFF5BC11E6061FB00A9DA00 /* jpush-ios-3.0.2.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = "jpush-ios-3.0.2.a"; sourceTree = "<group>"; };
+		AFFF5BC21E6061FB00A9DA00 /* JPUSHService.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JPUSHService.h; sourceTree = "<group>"; };
+		AFFF5BC51E60648F00A9DA00 /* CFNetwork.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CFNetwork.framework; path = System/Library/Frameworks/CFNetwork.framework; sourceTree = SDKROOT; };
+		AFFF5BC71E60649D00A9DA00 /* CoreFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreFoundation.framework; path = System/Library/Frameworks/CoreFoundation.framework; sourceTree = SDKROOT; };
+		AFFF5BC91E6064A500A9DA00 /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
+		AFFF5BCB1E6064AD00A9DA00 /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
+		AFFF5BCD1E6064B400A9DA00 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		AFFF5BCF1E6064BF00A9DA00 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
+		AFFF5BD11E6064C800A9DA00 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		AFFF5BD31E6064D000A9DA00 /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
+		AFFF5BD51E6064EC00A9DA00 /* UserNotifications.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UserNotifications.framework; path = System/Library/Frameworks/UserNotifications.framework; sourceTree = SDKROOT; };
+		AFFF5BD71E6064F500A9DA00 /* libresolv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libresolv.tbd; path = usr/lib/libresolv.tbd; sourceTree = SDKROOT; };
+		AFFF5BD91E60653800A9DA00 /* HYYSDKGroup.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = HYYSDKGroup.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -84,11 +113,23 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFF5BD81E6064F500A9DA00 /* libresolv.tbd in Frameworks */,
+				AFFF5BD61E6064EC00A9DA00 /* UserNotifications.framework in Frameworks */,
+				AF293D781E5B109200F2315B /* libz.tbd in Frameworks */,
+				AFFF5BD41E6064D000A9DA00 /* Security.framework in Frameworks */,
+				AFFF5BD21E6064C800A9DA00 /* UIKit.framework in Frameworks */,
+				AFFF5BD01E6064BF00A9DA00 /* Foundation.framework in Frameworks */,
+				AFFF5BCE1E6064B400A9DA00 /* CoreGraphics.framework in Frameworks */,
+				AFFF5BCC1E6064AD00A9DA00 /* SystemConfiguration.framework in Frameworks */,
+				AFFF5BCA1E6064A500A9DA00 /* CoreTelephony.framework in Frameworks */,
+				AFFF5BC81E60649D00A9DA00 /* CoreFoundation.framework in Frameworks */,
+				AFFF5BC61E60648F00A9DA00 /* CFNetwork.framework in Frameworks */,
+				AFFF5BC41E6061FB00A9DA00 /* jpush-ios-3.0.2.a in Frameworks */,
+				AFFF5BC31E6061FB00A9DA00 /* jcore-ios-1.1.1.a in Frameworks */,
 				AF293D801E5B10BD00F2315B /* libstdc++.tbd in Frameworks */,
 				AF293D7E1E5B10B300F2315B /* JavaScriptCore.framework in Frameworks */,
 				AF293D7C1E5B10A800F2315B /* MessageUI.framework in Frameworks */,
 				AF293D7A1E5B109A00F2315B /* libicucore.tbd in Frameworks */,
-				AF293D781E5B109200F2315B /* libz.tbd in Frameworks */,
 				AEDBF85788AD19147485A4E5 /* libPods-HYYSDKGroup.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -126,6 +167,7 @@
 		AF092D7F1E56F71C00D85BCA /* HYYSDKGroup */ = {
 			isa = PBXGroup;
 			children = (
+				AFFF5BD91E60653800A9DA00 /* HYYSDKGroup.entitlements */,
 				AF092D831E56F71C00D85BCA /* AppDelegate.h */,
 				AF092D841E56F71C00D85BCA /* AppDelegate.m */,
 				AF092DA31E56FD2B00D85BCA /* Classes */,
@@ -149,6 +191,7 @@
 		AF092DA31E56FD2B00D85BCA /* Classes */ = {
 			isa = PBXGroup;
 			children = (
+				AFFF5BBF1E6061FB00A9DA00 /* Lib */,
 				AF092DA41E56FD2B00D85BCA /* Main */,
 				AF092DA71E56FD2B00D85BCA /* OneVc */,
 			);
@@ -169,6 +212,7 @@
 		AF092DA71E56FD2B00D85BCA /* OneVc */ = {
 			isa = PBXGroup;
 			children = (
+				AFFF5BBB1E60610100A9DA00 /* Jpush(极光) */,
 				AF293D871E5DA01C00F2315B /* map(地图) */,
 				AF293D821E5C78B700F2315B /* share(友盟分享) */,
 				AF293D6F1E5B048500F2315B /* sms(短信验证) */,
@@ -317,9 +361,38 @@
 			path = "finger(指纹)";
 			sourceTree = "<group>";
 		};
+		AFFF5BBB1E60610100A9DA00 /* Jpush(极光) */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF5BBC1E60610F00A9DA00 /* HYYJPushViewController.h */,
+				AFFF5BBD1E60610F00A9DA00 /* HYYJPushViewController.m */,
+			);
+			path = "Jpush(极光)";
+			sourceTree = "<group>";
+		};
+		AFFF5BBF1E6061FB00A9DA00 /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				AFFF5BC01E6061FB00A9DA00 /* jcore-ios-1.1.1.a */,
+				AFFF5BC11E6061FB00A9DA00 /* jpush-ios-3.0.2.a */,
+				AFFF5BC21E6061FB00A9DA00 /* JPUSHService.h */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
 		BB0784CEB9D387349C637DD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFFF5BD71E6064F500A9DA00 /* libresolv.tbd */,
+				AFFF5BD51E6064EC00A9DA00 /* UserNotifications.framework */,
+				AFFF5BD31E6064D000A9DA00 /* Security.framework */,
+				AFFF5BD11E6064C800A9DA00 /* UIKit.framework */,
+				AFFF5BCF1E6064BF00A9DA00 /* Foundation.framework */,
+				AFFF5BCD1E6064B400A9DA00 /* CoreGraphics.framework */,
+				AFFF5BCB1E6064AD00A9DA00 /* SystemConfiguration.framework */,
+				AFFF5BC91E6064A500A9DA00 /* CoreTelephony.framework */,
+				AFFF5BC71E60649D00A9DA00 /* CoreFoundation.framework */,
+				AFFF5BC51E60648F00A9DA00 /* CFNetwork.framework */,
 				AF293D7F1E5B10BD00F2315B /* libstdc++.tbd */,
 				AF293D7D1E5B10B300F2315B /* JavaScriptCore.framework */,
 				AF293D7B1E5B10A800F2315B /* MessageUI.framework */,
@@ -364,8 +437,13 @@
 				TargetAttributes = {
 					AF092D7C1E56F71C00D85BCA = {
 						CreatedOnToolsVersion = 8.1;
-						DevelopmentTeam = 5W5FRMW6GD;
+						DevelopmentTeam = P4N5822AWY;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -459,6 +537,7 @@
 				AF293D6A1E598C0C00F2315B /* HYYMotionViewController.m in Sources */,
 				AF092DB21E57055200D85BCA /* HYYTabBarViewController.m in Sources */,
 				AF092DAF1E56FF8B00D85BCA /* HYYOneViewController.m in Sources */,
+				AFFF5BBE1E60610F00A9DA00 /* HYYJPushViewController.m in Sources */,
 				AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */,
 				AF293D851E5C78D900F2315B /* HYYShareViewController.m in Sources */,
 				AF293D8E1E5DA04500F2315B /* HYYMapMainViewController.m in Sources */,
@@ -578,14 +657,20 @@
 			baseConfigurationReference = 5F4E9E2686846A0D7F5C9243 /* Pods-HYYSDKGroup.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5W5FRMW6GD;
+				CODE_SIGN_ENTITLEMENTS = HYYSDKGroup/HYYSDKGroup.entitlements;
+				DEVELOPMENT_TEAM = P4N5822AWY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HYYSDKGroup/PrefixHeader.pch";
 				INFOPLIST_FILE = HYYSDKGroup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ABC-show123";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HYYSDKGroup/Classes/Lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.show123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/HYYSDKGroup/Classes/Lib";
 			};
 			name = Debug;
 		};
@@ -594,14 +679,20 @@
 			baseConfigurationReference = 167814BCED443CB3A1AA1566 /* Pods-HYYSDKGroup.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				DEVELOPMENT_TEAM = 5W5FRMW6GD;
+				CODE_SIGN_ENTITLEMENTS = HYYSDKGroup/HYYSDKGroup.entitlements;
+				DEVELOPMENT_TEAM = P4N5822AWY;
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "$(SRCROOT)/HYYSDKGroup/PrefixHeader.pch";
 				INFOPLIST_FILE = HYYSDKGroup/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "ABC-show123";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/HYYSDKGroup/Classes/Lib",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = ABC.show123;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				USER_HEADER_SEARCH_PATHS = "$(SRCROOT)/HYYSDKGroup/Classes/Lib";
 			};
 			name = Release;
 		};

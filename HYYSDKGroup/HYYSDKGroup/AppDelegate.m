@@ -13,9 +13,14 @@
 // 高德
 #import <AMapFoundationKit/AMapFoundationKit.h>
 
+// 引入JPush功能所需头文件
+#import "JPUSHService.h"
+// iOS10注册APNs所需头文件
+#ifdef NSFoundationVersionNumber_iOS_9_x_Max
+#import <UserNotifications/UserNotifications.h>
+#endif
 
-
-@interface AppDelegate ()
+@interface AppDelegate ()<JPUSHRegisterDelegate,UNUserNotificationCenterDelegate>
 
 @end
 
@@ -39,7 +44,43 @@
     [self umengShare];
     // 高德地图
     [AMapServices sharedServices].apiKey = @"e0214ac274094ae426eedf6b3074fe27";
+    
+    // 极光初始化APNs代码
+    //Required
+    //notice: 3.0.0及以后版本注册可以这样写，也可以继续用之前的注册方式
+    JPUSHRegisterEntity * entity = [[JPUSHRegisterEntity alloc] init];
+    entity.types = JPAuthorizationOptionAlert|JPAuthorizationOptionBadge|JPAuthorizationOptionSound;
+    if ([[UIDevice currentDevice].systemVersion floatValue] >= 8.0) {
+        // 可以添加自定义categories
+        // NSSet<UNNotificationCategory *> *categories for iOS10 or later
+        // NSSet<UIUserNotificationCategory *> *categories for iOS8 and iOS9
+    }
+    [JPUSHService registerForRemoteNotificationConfig:entity delegate:self];
+    //初始化JPush代码
+    // Optional
+    // 获取IDFA
+    // 如需使用IDFA功能请添加此代码并在初始化方法的advertisingIdentifier参数中填写对应值
+//    NSString *advertisingId = [[[ASIdentifierManager sharedManager] advertisingIdentifier] UUIDString];
+    
+    // Required
+    // init Push
+    // notice: 2.1.5版本的SDK新增的注册方法，改成可上报IDFA，如果没有使用IDFA直接传nil
+    // 如需继续使用pushConfig.plist文件声明appKey等配置内容，请依旧使用[JPUSHService setupWithOption:launchOptions]方式初始化。
+    [JPUSHService setupWithOption:launchOptions appKey:@"e3fb3437d210fe3b2bd22757"
+                          channel:nil
+                 apsForProduction:@"0"
+            advertisingIdentifier:nil];
+    
+    
     return YES;
+}
+// 极光
+- (void)application:(UIApplication *)application
+didRegisterForRemoteNotificationsWithDeviceToken:(NSData *)deviceToken {
+    UIUserNotificationSettings *settings = [UIUserNotificationSettings settingsForTypes:UIUserNotificationTypeNone | UIUserNotificationTypeBadge | UIUserNotificationTypeSound categories:nil];
+    [[UIApplication sharedApplication]registerUserNotificationSettings:settings];
+    /// Required - 注册 DeviceToken
+    [JPUSHService registerDeviceToken:deviceToken];
 }
 // 接收本地通知，进行下一步操作（应用在后台）
 -(void)application:(UIApplication *)application didReceiveLocalNotification:(UILocalNotification *)notification{
@@ -47,6 +88,141 @@
     NSLog(@"%@",context);
     
 }
+
+#pragma mark -远程通知,前台接受通知
+// App处于前台接收通知时
+// 1.下面这个代理方法，只会是app处于前台状态 前台状态 and 前台状态下才会走，后台模式下是不会走这里的
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(UNNotificationPresentationOptions))completionHandler{
+    
+    //收到推送的请求
+    UNNotificationRequest *request = notification.request;
+    
+    //收到推送的内容
+    UNNotificationContent *content = request.content;
+    
+    //收到用户的基本信息
+    NSDictionary *userInfo = content.userInfo;
+    
+    //收到推送消息的角标
+    NSNumber *badge = content.badge;
+    
+    //收到推送消息body
+    NSString *body = content.body;
+    
+    //推送消息的声音
+    UNNotificationSound *sound = content.sound;
+    
+    // 推送消息的副标题
+    NSString *subtitle = content.subtitle;
+    
+    // 推送消息的标题
+    NSString *title = content.title;
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        //此处省略一万行需求代码。。。。。。
+        NSLog(@"iOS10 收到远程通知:%@",userInfo);
+        
+    }else {
+        // 判断为本地通知
+        //此处省略一万行需求代码。。。。。。
+        NSLog(@"iOS10 收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+    }
+    
+    
+    // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以设置
+    completionHandler(UNNotificationPresentationOptionBadge|
+                      UNNotificationPresentationOptionSound|
+                      UNNotificationPresentationOptionAlert);
+    
+    
+    
+}
+
+#pragma mark - 远程通知吗,后台需要点击
+//App通知的点击事件
+// 2.下面这个代理方法，只会是用户点击消息才会触发，如果使用户长按（3DTouch）、弹出Action页面等并不会触发。点击Action的时候会触发！
+- (void)userNotificationCenter:(UNUserNotificationCenter *)center didReceiveNotificationResponse:(UNNotificationResponse *)response withCompletionHandler:(void (^)())completionHandler{
+    //收到推送的请求
+    UNNotificationRequest *request = response.notification.request;
+    
+    //收到推送的内容
+    UNNotificationContent *content = request.content;
+    
+    //收到用户的基本信息
+    NSDictionary *userInfo = content.userInfo;
+    
+    //收到推送消息的角标
+    NSNumber *badge = content.badge;
+    
+    //收到推送消息body
+    NSString *body = content.body;
+    
+    //推送消息的声音
+    UNNotificationSound *sound = content.sound;
+    
+    // 推送消息的副标题
+    NSString *subtitle = content.subtitle;
+    
+    // 推送消息的标题
+    NSString *title = content.title;
+    
+    if([response.notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        NSLog(@"iOS10 收到远程通知:%@",userInfo);
+        //此处省略一万行需求代码。。。。。。
+        
+    }else {
+        // 判断为本地通知
+        //此处省略一万行需求代码。。。。。。
+        NSLog(@"iOS10 收到本地通知:{\\\\nbody:%@，\\\\ntitle:%@,\\\\nsubtitle:%@,\\\\nbadge：%@，\\\\nsound：%@，\\\\nuserInfo：%@\\\\n}",body,title,subtitle,badge,sound,userInfo);
+    }
+    
+    //2016-09-27 14:42:16.353978 UserNotificationsDemo[1765:800117] Warning: UNUserNotificationCenter delegate received call to -userNotificationCenter:didReceiveNotificationResponse:withCompletionHandler: but the completion handler was never called.
+    completionHandler(); // 系统要求执行这个方法
+    
+    
+}
+
+#pragma mark - 远程通知,后台, 不用点击,不用前台,直接回调用
+-(void)application:(UIApplication *)application didReceiveRemoteNotification:(NSDictionary *)userInfo fetchCompletionHandler:(void (^)(UIBackgroundFetchResult))completionHandler{
+    
+    // MARK: - 后台通知     "content-available":"1" 要添加这个字段才可以
+    //{"aps":
+    //    {
+    //        "alert":"Testing.. (5)",
+    //        "badge":0,
+    //        "sound":"default",
+    //        "content-available":"1"
+    //    }
+    //}
+    // MARK: - 静默通知  删除掉alert badge sound
+    //    {"aps":
+    //        {
+    //            "content-available":"1"
+    //        }
+    //    }
+    
+    
+    NSLog(@"%@",userInfo);
+    
+    completionHandler(UIBackgroundFetchResultNewData);
+    
+    
+}
+
+#pragma mark - JPUSHRegisterDelegate   有这个delegate方法那么系统的方法不会被调用!!!!
+// MARK: - 前台得到的的通知对象
+- (void)jpushNotificationCenter:(UNUserNotificationCenter *)center willPresentNotification:(UNNotification *)notification withCompletionHandler:(void (^)(NSInteger options))completionHandler{
+    // Required
+    NSDictionary * userInfo = notification.request.content.userInfo;
+    
+    if([notification.request.trigger isKindOfClass:[UNPushNotificationTrigger class]]) {
+        [JPUSHService handleRemoteNotification:userInfo];
+    }
+    
+    completionHandler(UNNotificationPresentationOptionAlert); // 需要执行这个方法，选择是否提醒用户，有Badge、Sound、Alert三种类型可以选择设置
+    
+}
+
 // 友盟分享代码
 -(void)umengShare{
     /* 打开调试日志 */

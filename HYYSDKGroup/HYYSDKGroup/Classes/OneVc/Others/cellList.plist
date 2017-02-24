@@ -44,5 +44,11 @@
 		<key>title</key>
 		<string>运动地图</string>
 	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYJPushViewController</string>
+		<key>title</key>
+		<string>极光推送</string>
+	</dict>
 </array>
 </plist>
