@@ -28,6 +28,9 @@
 		AF293D851E5C78D900F2315B /* HYYShareViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D841E5C78D900F2315B /* HYYShareViewController.m */; };
 		AF293D8E1E5DA04500F2315B /* HYYMapMainViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D8D1E5DA04500F2315B /* HYYMapMainViewController.m */; };
 		AF293D911E5DC39400F2315B /* HYYLocalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF293D901E5DC39400F2315B /* HYYLocalViewController.m */; };
+		AF9B10DC1E66FA9C005554AF /* HYYUNNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B10DB1E66FA9C005554AF /* HYYUNNoteViewController.m */; };
+		AF9B10DE1E66FE4B005554AF /* buyao.caf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B10DD1E66FE4B005554AF /* buyao.caf */; };
+		AF9B10E01E66FE57005554AF /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF9B10DF1E66FE57005554AF /* minion_01.mp4 */; };
 		AFB78B691E5804B200764F9C /* HYYOneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */; };
 		AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6B1E58051F00764F9C /* oneModel.m */; };
 		AFB78B701E5808EE00764F9C /* HYYFingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6F1E5808EE00764F9C /* HYYFingerViewController.m */; };
@@ -104,6 +107,10 @@
 		AF293D8D1E5DA04500F2315B /* HYYMapMainViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYMapMainViewController.m; sourceTree = "<group>"; };
 		AF293D8F1E5DC39400F2315B /* HYYLocalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYLocalViewController.h; sourceTree = "<group>"; };
 		AF293D901E5DC39400F2315B /* HYYLocalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYLocalViewController.m; sourceTree = "<group>"; };
+		AF9B10DA1E66FA9C005554AF /* HYYUNNoteViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYUNNoteViewController.h; sourceTree = "<group>"; };
+		AF9B10DB1E66FA9C005554AF /* HYYUNNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYUNNoteViewController.m; sourceTree = "<group>"; };
+		AF9B10DD1E66FE4B005554AF /* buyao.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = buyao.caf; sourceTree = "<group>"; };
+		AF9B10DF1E66FE57005554AF /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
 		AFB78B671E5804B200764F9C /* HYYOneCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYOneCollectionViewCell.h; sourceTree = "<group>"; };
 		AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYOneCollectionViewCell.m; sourceTree = "<group>"; };
 		AFB78B6A1E58051F00764F9C /* oneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneModel.h; sourceTree = "<group>"; };
@@ -346,6 +353,7 @@
 		AF092DA71E56FD2B00D85BCA /* OneVc */ = {
 			isa = PBXGroup;
 			children = (
+				AF9B10D91E66FA85005554AF /* UNNote */,
 				AFFF5BDA1E65ABCE00A9DA00 /* 支付宝 */,
 				AFFF5BBB1E60610100A9DA00 /* Jpush(极光) */,
 				AF293D871E5DA01C00F2315B /* map(地图) */,
@@ -486,6 +494,17 @@
 			children = (
 			);
 			path = view;
+			sourceTree = "<group>";
+		};
+		AF9B10D91E66FA85005554AF /* UNNote */ = {
+			isa = PBXGroup;
+			children = (
+				AF9B10DF1E66FE57005554AF /* minion_01.mp4 */,
+				AF9B10DD1E66FE4B005554AF /* buyao.caf */,
+				AF9B10DA1E66FA9C005554AF /* HYYUNNoteViewController.h */,
+				AF9B10DB1E66FA9C005554AF /* HYYUNNoteViewController.m */,
+			);
+			path = UNNote;
 			sourceTree = "<group>";
 		};
 		AFB78B6D1E5808C500764F9C /* finger(指纹) */ = {
@@ -737,8 +756,10 @@
 				AFFF5C821E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 in Resources */,
 				AF293D761E5B05D400F2315B /* cellList.plist in Resources */,
 				AF092D901E56F71C00D85BCA /* LaunchScreen.storyboard in Resources */,
+				AF9B10E01E66FE57005554AF /* minion_01.mp4 in Resources */,
 				AFFF5BE01E65AD7500A9DA00 /* AlipaySDK.bundle in Resources */,
 				AF092D8D1E56F71C00D85BCA /* Assets.xcassets in Resources */,
+				AF9B10DE1E66FE4B005554AF /* buyao.caf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -813,6 +834,7 @@
 				AFFF5C511E65AFE400A9DA00 /* RSADataSigner.m in Sources */,
 				AF293D851E5C78D900F2315B /* HYYShareViewController.m in Sources */,
 				AF293D8E1E5DA04500F2315B /* HYYMapMainViewController.m in Sources */,
+				AF9B10DC1E66FA9C005554AF /* HYYUNNoteViewController.m in Sources */,
 				AFFF5C4B1E65AFE400A9DA00 /* base64.m in Sources */,
 				AF092D851E56F71C00D85BCA /* AppDelegate.m in Sources */,
 				AFFF5C4E1E65AFE400A9DA00 /* MD5DataSigner.m in Sources */,

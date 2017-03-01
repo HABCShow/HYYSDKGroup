@@ -56,5 +56,11 @@
 		<key>title</key>
 		<string>支付宝</string>
 	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYUNNoteViewController</string>
+		<key>title</key>
+		<string>10.0推送</string>
+	</dict>
 </array>
 </plist>

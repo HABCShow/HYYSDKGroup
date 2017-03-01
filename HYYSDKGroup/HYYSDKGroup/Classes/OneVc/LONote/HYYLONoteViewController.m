@@ -64,6 +64,7 @@
     note.fireDate = [NSDate dateWithTimeIntervalSinceNow:3];
     note.userInfo = @{@"context":@"嗨，您好！"};
     note.category = @"localNote";
+    note.soundName = UILocalNotificationDefaultSoundName;
     // 预定通知
     [[UIApplication sharedApplication]scheduleLocalNotification:note];
     
