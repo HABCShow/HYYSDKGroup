@@ -31,6 +31,7 @@
 		AF9B10DC1E66FA9C005554AF /* HYYUNNoteViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AF9B10DB1E66FA9C005554AF /* HYYUNNoteViewController.m */; };
 		AF9B10DE1E66FE4B005554AF /* buyao.caf in Resources */ = {isa = PBXBuildFile; fileRef = AF9B10DD1E66FE4B005554AF /* buyao.caf */; };
 		AF9B10E01E66FE57005554AF /* minion_01.mp4 in Resources */ = {isa = PBXBuildFile; fileRef = AF9B10DF1E66FE57005554AF /* minion_01.mp4 */; };
+		AF9B10E21E670B51005554AF /* 37208f1aed2c5c845ffe5d5a87252914.png in Resources */ = {isa = PBXBuildFile; fileRef = AF9B10E11E670B51005554AF /* 37208f1aed2c5c845ffe5d5a87252914.png */; };
 		AFB78B691E5804B200764F9C /* HYYOneCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */; };
 		AFB78B6C1E58051F00764F9C /* oneModel.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6B1E58051F00764F9C /* oneModel.m */; };
 		AFB78B701E5808EE00764F9C /* HYYFingerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AFB78B6F1E5808EE00764F9C /* HYYFingerViewController.m */; };
@@ -111,6 +112,7 @@
 		AF9B10DB1E66FA9C005554AF /* HYYUNNoteViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYUNNoteViewController.m; sourceTree = "<group>"; };
 		AF9B10DD1E66FE4B005554AF /* buyao.caf */ = {isa = PBXFileReference; lastKnownFileType = file; path = buyao.caf; sourceTree = "<group>"; };
 		AF9B10DF1E66FE57005554AF /* minion_01.mp4 */ = {isa = PBXFileReference; lastKnownFileType = file; path = minion_01.mp4; sourceTree = "<group>"; };
+		AF9B10E11E670B51005554AF /* 37208f1aed2c5c845ffe5d5a87252914.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = 37208f1aed2c5c845ffe5d5a87252914.png; sourceTree = "<group>"; };
 		AFB78B671E5804B200764F9C /* HYYOneCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = HYYOneCollectionViewCell.h; sourceTree = "<group>"; };
 		AFB78B681E5804B200764F9C /* HYYOneCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = HYYOneCollectionViewCell.m; sourceTree = "<group>"; };
 		AFB78B6A1E58051F00764F9C /* oneModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = oneModel.h; sourceTree = "<group>"; };
@@ -499,6 +501,7 @@
 		AF9B10D91E66FA85005554AF /* UNNote */ = {
 			isa = PBXGroup;
 			children = (
+				AF9B10E11E670B51005554AF /* 37208f1aed2c5c845ffe5d5a87252914.png */,
 				AF9B10DF1E66FE57005554AF /* minion_01.mp4 */,
 				AF9B10DD1E66FE4B005554AF /* buyao.caf */,
 				AF9B10DA1E66FA9C005554AF /* HYYUNNoteViewController.h */,
@@ -753,6 +756,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AF9B10E21E670B51005554AF /* 37208f1aed2c5c845ffe5d5a87252914.png in Resources */,
 				AFFF5C821E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 in Resources */,
 				AF293D761E5B05D400F2315B /* cellList.plist in Resources */,
 				AF092D901E56F71C00D85BCA /* LaunchScreen.storyboard in Resources */,

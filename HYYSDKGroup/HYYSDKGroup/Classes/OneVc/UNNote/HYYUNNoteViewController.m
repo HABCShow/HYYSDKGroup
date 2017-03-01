@@ -102,13 +102,13 @@ typedef enum {
     
     switch (button.tag) {
         case KNoteImage:
-            
+            [self PushNoteWithFileName:@"37208f1aed2c5c845ffe5d5a87252914.png"];
             break;
         case KNoteAudio:
-            
+            [self PushNoteWithFileName:@"buyao.caf"];
             break;
         case KNoteMovie:
-            
+            [self PushNoteWithFileName:@"minion_01.mp4"];
             break;
         default:
             break;
@@ -117,9 +117,54 @@ typedef enum {
     
 }
 
+-(void)PushNoteWithFileName:(NSString *)fileName{
+    
+    UNNotificationAction *action1 = [UNNotificationAction actionWithIdentifier:@"a1" title:@"解锁使用" options:UNNotificationActionOptionAuthenticationRequired];
+    UNNotificationAction *action2 = [UNNotificationAction actionWithIdentifier:@"a2" title:@"具有破坏性" options:UNNotificationActionOptionDestructive];
+    UNNotificationAction *action3 = [UNNotificationAction actionWithIdentifier:@"a3" title:@"进入到前台" options:UNNotificationActionOptionForeground];
+    UNNotificationCategory *category = [UNNotificationCategory categoryWithIdentifier:@"category" actions:@[action1,action2,action3] intentIdentifiers:@[@"a1",@"a2",@"a3"] options:UNNotificationCategoryOptionCustomDismissAction];
+    /* 
+     typedef NS_OPTIONS(NSUInteger, UNNotificationCategoryOptions) {
+     UNNotificationCategoryOptionNone = (0),
+     
+     // Whether dismiss action should be sent to the UNUserNotificationCenter delegate
+     UNNotificationCategoryOptionCustomDismissAction = (1 << 0),
+     
+     // Whether notifications of this category should be allowed in CarPlay
+     UNNotificationCategoryOptionAllowInCarPlay = (2 << 0),
+     
+     }
+     */
+    UNMutableNotificationContent *content = [[UNMutableNotificationContent alloc]init];
+    content.body = @"iOS 10推送";
+    content.title = @"我是主标题";
+    content.subtitle = @"我是副标题";
+    content.categoryIdentifier = @"category";
+    content.sound = [UNNotificationSound defaultSound];
+    UNNotificationAttachment *attachment = [UNNotificationAttachment attachmentWithIdentifier:fileName URL:[NSURL fileURLWithPath:[[NSBundle mainBundle] pathForResource:fileName ofType:nil]] options:nil error:nil];
+    content.attachments =@[attachment];
+    UNTimeIntervalNotificationTrigger *trigger = [UNTimeIntervalNotificationTrigger triggerWithTimeInterval:3 repeats:NO];
+    UNNotificationRequest *request = [UNNotificationRequest requestWithIdentifier:@"request" content:content trigger:trigger];
+    [[UNUserNotificationCenter currentNotificationCenter]setNotificationCategories:[NSSet setWithObject:category]];
+   [ [UNUserNotificationCenter currentNotificationCenter] addNotificationRequest:request withCompletionHandler:^(NSError * _Nullable error) {
+       if (error) {
+           [SVProgressHUD showErrorWithStatus:@"发送失败"];
+       }else{
+           [SVProgressHUD showSuccessWithStatus:@"发送成功"];
+       }
+   }];
+    
+}
+
+
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+-(void)viewWillDisappear:(BOOL)animated{
+    [SVProgressHUD dismiss];
+    
 }
 
 /*

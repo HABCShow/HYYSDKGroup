@@ -69,7 +69,8 @@
     [[UIApplication sharedApplication]scheduleLocalNotification:note];
     
 }
-    
+
+
 /*
 #pragma mark - Navigation
 
