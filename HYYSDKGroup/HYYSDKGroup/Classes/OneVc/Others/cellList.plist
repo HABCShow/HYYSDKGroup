@@ -50,5 +50,11 @@
 		<key>title</key>
 		<string>极光推送</string>
 	</dict>
+	<dict>
+		<key>nameVC</key>
+		<string>HYYPayViewController</string>
+		<key>title</key>
+		<string>支付宝</string>
+	</dict>
 </array>
 </plist>

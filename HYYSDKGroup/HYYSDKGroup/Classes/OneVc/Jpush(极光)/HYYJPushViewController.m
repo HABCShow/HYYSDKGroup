@@ -16,8 +16,18 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    // Do any additional setup after loading the view.
-}
+    self.view.backgroundColor = [UIColor orangeColor];
+    UILabel *label = [[UILabel alloc]init];
+    label.backgroundColor = [UIColor whiteColor];
+    label.font = [UIFont systemFontOfSize:30];
+    label.textAlignment = NSTextAlignmentCenter;
+    label.text = @"请到极光平台发送通知";
+    [self.view addSubview:label];
+    [label mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.center.equalTo(self.view);
+        make.left.equalTo(self.view).offset(30);
+        make.right.equalTo(self.view).offset(-30);
+    }];}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
