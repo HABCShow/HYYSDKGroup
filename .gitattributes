@@ -1,4 +1,1 @@
-*.js linguist-language=Scala
-*.css linguist-language=Scala
-*.html linguist-language=Scal
-*.c linguist-language=Scal
+*.C linguist-language=Objective-C
