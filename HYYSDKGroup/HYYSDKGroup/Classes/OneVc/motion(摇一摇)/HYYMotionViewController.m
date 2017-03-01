@@ -7,6 +7,8 @@
 //
 
 #import "HYYMotionViewController.h"
+#import <AudioToolbox/AudioToolbox.h>
+
 
 @interface HYYMotionViewController ()
 
@@ -38,9 +40,22 @@
     }];
     
 }
+-(void)shakeSound{
+    
+    SystemSoundID soundID;
+    NSString *filePath = [[NSBundle mainBundle]pathForResource:@"微信摇一摇音效.mp3" ofType:nil];
+    NSURL *url = [NSURL fileURLWithPath:filePath];
+    CFURLRef urlRef = (__bridge CFURLRef)(url);
+    // 生成soundid
+    AudioServicesCreateSystemSoundID(urlRef, &soundID);
+    AudioServicesPlaySystemSound(soundID);
+    
+}
+
     // 开始摇晃手机
 -(void)motionBegan:(UIEventSubtype)motion withEvent:(UIEvent *)event{
     self.label.hidden = YES;
+    [self shakeSound];
     [SVProgressHUD showSuccessWithStatus:@"检测到摇动"];
     
     
@@ -51,12 +66,11 @@
 }
     
 -(void)motionEnded:(UIEventSubtype)motion withEvent:(UIEvent *)event{
-    [NSTimer scheduledTimerWithTimeInterval:0.5 repeats:NO block:^(NSTimer * _Nonnull timer) {
+    [NSTimer scheduledTimerWithTimeInterval:2.0 repeats:NO block:^(NSTimer * _Nonnull timer) {
+        AudioServicesPlaySystemSound(kSystemSoundID_Vibrate);
         [SVProgressHUD showSuccessWithStatus:@"摇动结束"];
-
-        
     }];
-    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
+    dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(2.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
         [SVProgressHUD dismiss];
         self.label.hidden = NO;
     });

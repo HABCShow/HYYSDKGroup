@@ -62,6 +62,8 @@
 		AFFF5C521E65AFE400A9DA00 /* RSADataVerifier.m in Sources */ = {isa = PBXBuildFile; fileRef = AFFF5C4A1E65AFE400A9DA00 /* RSADataVerifier.m */; };
 		AFFF5C551E65AFF200A9DA00 /* libcrypto.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5C531E65AFF200A9DA00 /* libcrypto.a */; };
 		AFFF5C561E65AFF200A9DA00 /* libssl.a in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5C541E65AFF200A9DA00 /* libssl.a */; };
+		AFFF5C801E66CDA700A9DA00 /* AudioToolbox.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = AFFF5C7F1E66CDA700A9DA00 /* AudioToolbox.framework */; };
+		AFFF5C821E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = AFFF5C811E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -228,6 +230,8 @@
 		AFFF5C4A1E65AFE400A9DA00 /* RSADataVerifier.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RSADataVerifier.m; sourceTree = "<group>"; };
 		AFFF5C531E65AFF200A9DA00 /* libcrypto.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libcrypto.a; sourceTree = "<group>"; };
 		AFFF5C541E65AFF200A9DA00 /* libssl.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; path = libssl.a; sourceTree = "<group>"; };
+		AFFF5C7F1E66CDA700A9DA00 /* AudioToolbox.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AudioToolbox.framework; path = System/Library/Frameworks/AudioToolbox.framework; sourceTree = SDKROOT; };
+		AFFF5C811E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "微信摇一摇音效.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -235,6 +239,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFF5C801E66CDA700A9DA00 /* AudioToolbox.framework in Frameworks */,
 				AFFF5BE91E65AE3500A9DA00 /* CoreMotion.framework in Frameworks */,
 				AFFF5BC61E60648F00A9DA00 /* CFNetwork.framework in Frameworks */,
 				AFFF5C551E65AFF200A9DA00 /* libcrypto.a in Frameworks */,
@@ -405,6 +410,7 @@
 		AF293D671E598BFB00F2315B /* motion(摇一摇) */ = {
 			isa = PBXGroup;
 			children = (
+				AFFF5C811E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 */,
 				AF293D681E598C0C00F2315B /* HYYMotionViewController.h */,
 				AF293D691E598C0C00F2315B /* HYYMotionViewController.m */,
 			);
@@ -636,6 +642,7 @@
 		BB0784CEB9D387349C637DD1 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				AFFF5C7F1E66CDA700A9DA00 /* AudioToolbox.framework */,
 				AFFF5BE81E65AE3500A9DA00 /* CoreMotion.framework */,
 				AFFF5BE61E65AE0900A9DA00 /* CoreText.framework */,
 				AFFF5BE41E65AE0000A9DA00 /* QuartzCore.framework */,
@@ -727,6 +734,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AFFF5C821E66CE8D00A9DA00 /* 微信摇一摇音效.mp3 in Resources */,
 				AF293D761E5B05D400F2315B /* cellList.plist in Resources */,
 				AF092D901E56F71C00D85BCA /* LaunchScreen.storyboard in Resources */,
 				AFFF5BE01E65AD7500A9DA00 /* AlipaySDK.bundle in Resources */,
